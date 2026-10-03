@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum &amp; Rechtliches — Lern-Abo Kiel</title>
+<meta name="description" content="Impressum, Datenschutz und Abo-Bedingungen der Lern-Abo-Website (Nachhilfe Kiel).">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:rgba(0,0,0,.95); --body:rgba(0,0,0,.8);
+  --gray:#615d59; --gray-l:#a39e98;
+  --warm:#f6f5f4; --blue:#0075de;
+  --border:rgba(0,0,0,.1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+[id]{scroll-margin-top:80px}
+html[lang="ar"] body{font-family:'Cairo','Inter',system-ui,sans-serif}
+body{font-family:'Inter','Cairo',system-ui,sans-serif;background:#fff;color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+a{color:var(--blue)}
+.mi{font-family:'Material Symbols Rounded';font-weight:normal;font-style:normal;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;vertical-align:middle}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+nav .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 24px;max-width:1120px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;letter-spacing:-.4px;color:var(--ink);text-decoration:none;flex-shrink:0}
+.logo .mark{width:32px;height:32px;border-radius:8px;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center}
+.logo .mark .mi{font-size:19px}
+.nav-right{display:flex;align-items:center;gap:12px}
+.langtog{display:flex;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:#fff}
+.langtog button{border:none;background:transparent;font:inherit;font-weight:600;font-size:13.5px;padding:7px 14px;cursor:pointer;color:var(--gray);transition:background .2s,color .2s}
+.langtog button.on{background:var(--ink);color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:14.5px;padding:9px 16px;border-radius:4px;text-decoration:none;border:1px solid transparent;cursor:pointer;white-space:nowrap;transition:background .15s}
+.btn-line{background:#fff;color:var(--ink);border-color:var(--border)}
+.btn-line:hover{background:var(--warm)}
+.btn .mi{font-size:17px}
+
+main{padding:56px 0 24px}
+h1{font-size:clamp(30px,4vw,42px);font-weight:700;letter-spacing:-1.4px;line-height:1.05}
+.lead{font-size:16px;color:var(--gray);margin-top:12px;max-width:72ch}
+h2{font-size:24px;font-weight:700;letter-spacing:-.8px;margin-top:48px;padding-top:6px}
+h3{font-size:18.5px;font-weight:700;letter-spacing:-.4px;margin:26px 0 6px}
+p,li{font-size:15.4px;color:var(--gray)}
+p{margin-top:8px;max-width:78ch}
+ul{margin:6px 0 6px 20px}
+html[lang="ar"] ul{margin:6px 20px 6px 0}
+
+footer{border-top:1px solid var(--border);margin-top:56px;padding:26px 0 48px;background:var(--warm)}
+footer .row{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:14.5px;color:var(--gray)}
+footer a{color:var(--gray);text-decoration:none;font-weight:600}
+footer a:hover{color:var(--ink)}
+@media (max-width:640px){main{padding:36px 0 12px} h2{margin-top:36px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="row">
+    <a class="logo" href="index.html"><span class="mark"><span class="mi">school</span></span>Lern-Abo</a>
+    <div class="nav-right">
+      <div class="langtog" role="group" aria-label="Sprache / اللغة">
+        <button id="langDe" class="on" onclick="setLang('de')" type="button">DE</button>
+        <button id="langAr" onclick="setLang('ar')" type="button">عربي</button>
+      </div>
+      <a class="btn btn-line" href="index.html"><span class="mi">arrow_back</span><span data-ar="إلى الصفحة الرئيسية">Zur Startseite</span></a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <h1 data-ar="إشعار قانوني وحماية البيانات">Impressum &amp; Rechtliches</h1>
+  <p class="lead" data-ar="المعلومات القانونية لموقع «باقة التعلّم» (Lern-Abo) — كيل.">Die rechtlichen Angaben zur Lern-Abo-Website.</p>
+
+  <h2 id="impressum" data-ar="إشعار قانوني (Impressum)">Impressum</h2>
+  <p>Tarek Issa · Sören 18 · 24148 Kiel · WhatsApp: 0152 56585467</p>
+
+  <h2 id="datenschutz" data-ar="حماية البيانات (Datenschutz, Kurzfassung)">Datenschutz (Kurzfassung)</h2>
+  <p data-ar="لا يخزّن هذا الموقع أي ملفات تعريف ارتباط ولا يجمع أي بيانات تحليلية. عند التواصل عبر واتساب نعالج بياناتكم فقط لتنفيذ اشتراك الباقة، ولا يتم تزويد أي طرف ثالث بها.">Diese Seite speichert keine Cookies und erhebt keine Analysedaten. Wenn ihr per WhatsApp Kontakt aufnehmt, verarbeiten wir eure Daten nur zur Abwicklung des Abo-Vertrags. Eine Weitergabe an Dritte findet nicht statt.</p>
+
+  <h2 id="bedingungen" data-ar="شروط الاشتراك (Abo-Bedingungen, Kurzfassung)">Abo-Bedingungen (Kurzfassung)</h2>
+  <p data-ar='النسخة الكاملة للطباعة متاحة كملف PDF (<a href="Lern-Abo-Bedingungen.pdf" target="_blank">Lern-Abo-Bedingungen.pdf</a>).'>Vollständige Fassung zum Ausdrucken gibt es als PDF (<a href="Lern-Abo-Bedingungen.pdf" target="_blank">Lern-Abo-Bedingungen.pdf</a>).</p>
+  <ul>
+    <li data-ar="<b>المدة:</b> يمتد شهريًا، إلغاء في أي وقت حتى نهاية الشهر (ببساطة عبر واتساب)."><b>Laufzeit:</b> monatlich laufend, jederzeit zum Monatsende kündbar (formlos per WhatsApp).</li>
+    <li data-ar="<b>الدفع:</b> شهريًا مقدمًا عن طريق تحويل بنكي."><b>Zahlung:</b> monatlich im Voraus, per Überweisung.</li>
+    <li data-ar="<b>الساعات:</b> حصتان مباشرتان (45 دقيقة) كل شهر ميلادي — غير قابلتان للتحويل أو التجميع."><b>Stunden:</b> 2 Live-Stunden (45 Min) je Kalendermonat, nicht übertragbar, nicht ansparbar.</li>
+    <li data-ar="<b>الإلغاء:</b> خلال 14 يومًا للعقود المتعقَّدة عن بُعد (التفاصيل في ملف PDF)."><b>Widerruf:</b> 14 Tage bei Fernabsatz-Verträgen (Details im PDF).</li>
+  </ul>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <div><a href="index.html" data-ar="إلى الصفحة الرئيسية">← Zur Startseite</a></div>
+    <div data-ar="Lern-Abo · رياضيات أو ألمانية · كيل · WhatsApp 0152 56585467">Lern-Abo · Mathe oder Deutsch · Kiel · WhatsApp 0152 56585467</div>
+  </div>
+</footer>
+
+<script>
+var TITLES={de:"Impressum & Rechtliches — Lern-Abo Kiel",ar:"إشعار قانوني وحماية البيانات — Lern-Abo Kiel"};
+function setLang(lang){
+  if(lang!=="ar") lang="de";
+  document.documentElement.lang=lang;
+  document.documentElement.dir=(lang==="ar")?"rtl":"ltr";
+  document.title=TITLES[lang];
+  document.querySelectorAll("[data-ar]").forEach(function(el){
+    if(!el.hasAttribute("data-de")) el.setAttribute("data-de",el.innerHTML);
+    el.innerHTML=(lang==="ar")?el.getAttribute("data-ar"):el.getAttribute("data-de");
+  });
+  document.querySelectorAll("[data-ar-html]").forEach(function(el){
+    if(!el.hasAttribute("data-de-html")) el.setAttribute("data-de-html",el.innerHTML);
+    el.innerHTML=(lang==="ar")?el.getAttribute("data-ar-html"):el.getAttribute("data-de-html");
+  });
+  document.getElementById("langDe").classList.toggle("on",lang!=="ar");
+  document.getElementById("langAr").classList.toggle("on",lang==="ar");
+  try{localStorage.setItem("lernaboLang",lang)}catch(e){}
+}
+(function(){
+  var q=new URLSearchParams(location.search).get("lang");
+  var saved=null; try{saved=localStorage.getItem("lernaboLang")}catch(e){}
+  if(q==="ar"||saved==="ar") setLang("ar");
+})();
+</script>
+
+</body>
+</html>
