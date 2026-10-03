@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lern-Abo Kiel — Nachhilfe im Abo, Mathe &amp; Deutsch</title>
+<meta name="description" content="Wöchentliche Aufgaben zum Schulthema, Korrektur am nächsten Tag und 2 Live-Stunden pro Monat. Mathe (alle Klassen) und Deutsch bis Klasse 10. Kiel und online.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:rgba(0,0,0,.95); --body:rgba(0,0,0,.8);
+  --gray:#615d59; --gray-l:#a39e98;
+  --warm:#f6f5f4; --warm2:#efeeec;
+  --blue:#0075de; --blue-d:#005bab; --navy:#213183;
+  --border:rgba(0,0,0,.1);
+  --shadow:rgba(0,0,0,.04) 0 4px 18px, rgba(0,0,0,.027) 0 2px 7.8px, rgba(0,0,0,.02) 0 .8px 2.9px;
+  --shadow-d:rgba(0,0,0,.05) 0 14px 28px, rgba(0,0,0,.04) 0 7px 15px, rgba(0,0,0,.02) 0 3px 7px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+[id]{scroll-margin-top:78px}
+html[lang="ar"] body{font-family:'Cairo','Inter',system-ui,sans-serif}
+body{font-family:'Inter','Cairo',system-ui,-apple-system,sans-serif;background:#fff;color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased;text-wrap:pretty}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+a{color:var(--blue)}
+.mi{font-family:'Material Symbols Rounded';font-weight:normal;font-style:normal;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;direction:ltr;font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;vertical-align:middle}
+.eyebrow{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;color:var(--gray-l)}
+
+/* Wellen-Dekor: eigener Block, kein Überlapp mit Inhalt */
+.wavedeco{display:block;width:100%;height:56px;background:#fff}
+.wavedeco svg{display:block;width:100%;height:56px}
+
+/* ---------- Nav ---------- */
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+nav .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 24px;max-width:1120px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;letter-spacing:-.4px;color:var(--ink);text-decoration:none;flex-shrink:0}
+.logo .mark{width:32px;height:32px;border-radius:8px;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center}
+.logo .mark .mi{font-size:19px}
+.nav-right{display:flex;align-items:center;gap:12px}
+.langtog{display:flex;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:#fff}
+.langtog button{border:none;background:transparent;font:inherit;font-weight:600;font-size:13.5px;padding:7px 14px;cursor:pointer;color:var(--gray)}
+.langtog button.on{background:var(--ink);color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:15px;padding:10px 18px;border-radius:4px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .15s,transform .1s}
+.btn:active{transform:scale(.97)}
+.btn .mi{font-size:18px}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-d)}
+.btn-ghost{background:rgba(0,0,0,.05);color:var(--ink)}
+.btn-ghost:hover{background:rgba(0,0,0,.09)}
+.btn-line{background:#fff;color:var(--ink);border-color:var(--border)}
+.btn-line:hover{background:var(--warm)}
+.btn-lg{font-size:16px;padding:13px 24px}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--warm);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:84px 0 96px}
+.badge{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--border);border-radius:9999px;padding:6px 14px;font-size:13px;font-weight:600;color:var(--gray);box-shadow:var(--shadow)}
+.badge .mi{font-size:16px;color:var(--blue)}
+h1{font-size:clamp(38px,5.2vw,62px);font-weight:700;line-height:1.02;letter-spacing:-2.1px;margin-top:22px;color:var(--ink)}
+h1 .hl{color:var(--blue)}
+.hero p.sub{font-size:clamp(17px,1.8vw,20px);font-weight:500;color:var(--gray);max-width:52ch;margin-top:20px;letter-spacing:-.125px}
+.hero p.sub b{color:var(--ink);font-weight:600}
+.hero-btns{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+.hero-trust{margin-top:22px;display:flex;gap:20px;flex-wrap:wrap;font-size:14px;font-weight:500;color:var(--gray)}
+.hero-trust span{display:inline-flex;align-items:center;gap:6px}
+.hero-trust .mi{font-size:17px;color:#1aae39}
+
+/* Hero-Panel: ruhige Karte statt schwebender Elemente */
+.hpanel{background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow-d);overflow:hidden}
+.hpanel .head{background:var(--navy);color:#fff;padding:20px 24px}
+.hpanel .head .k{font-size:12.5px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;opacity:.75}
+.hpanel .head .v{font-size:34px;font-weight:700;letter-spacing:-1.4px;margin-top:2px}
+.hpanel .head .v small{font-size:15px;font-weight:500;letter-spacing:0;opacity:.8}
+.hpanel ul{list-style:none;padding:18px 24px 20px}
+.hpanel li{display:flex;gap:11px;align-items:flex-start;padding:8px 0;font-size:15px;color:var(--body);border-bottom:1px solid var(--border)}
+.hpanel li:last-child{border-bottom:none}
+.hpanel li .mi{font-size:19px;color:var(--blue);flex-shrink:0;margin-top:1px}
+.hpanel .foot{background:var(--warm);border-top:1px solid var(--border);padding:13px 24px;font-size:13.5px;font-weight:500;color:var(--gray);display:flex;align-items:center;gap:8px}
+.hpanel .foot .mi{font-size:16px}
+
+/* ---------- Sektionen ---------- */
+section{padding:80px 0}
+section.alt{background:var(--warm);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.sec-head{max-width:640px}
+h2{font-size:clamp(28px,3.6vw,44px);font-weight:700;letter-spacing:-1.5px;line-height:1.05;margin-top:10px}
+.sec-sub{font-size:17.5px;font-weight:500;color:var(--gray);margin-top:14px;letter-spacing:-.1px}
+
+/* Ablauf: 4 Spalten, feste Rasterhöhe */
+.flow{margin-top:44px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.step{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px 22px;box-shadow:var(--shadow);display:flex;flex-direction:column;min-height:100%}
+.step .circ{width:46px;height:46px;border-radius:10px;background:#eaf4fe;display:flex;align-items:center;justify-content:center;color:var(--blue);margin-bottom:16px}
+.step .circ .mi{font-size:25px}
+.step .num{font-size:12.5px;font-weight:600;letter-spacing:.7px;text-transform:uppercase;color:var(--gray-l)}
+.step h3{font-size:18.5px;font-weight:700;letter-spacing:-.35px;margin-top:5px}
+.step p{font-size:14.8px;color:var(--gray);margin-top:8px;flex-grow:1}
+.flowline{margin-top:18px;height:1px;background:repeating-linear-gradient(90deg,var(--gray-l) 0 6px,transparent 6px 12px);opacity:.6}
+.fachnote{margin-top:18px;display:flex;align-items:center;gap:10px;font-size:14.5px;font-weight:500;color:var(--gray);background:var(--warm);border:1px solid var(--border);border-radius:8px;padding:12px 16px}
+.fachnote .mi{color:var(--blue);font-size:20px;flex-shrink:0}
+
+/* Zwei Zielgruppen */
+.tracks{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.track{background:#fff;border:1px solid var(--border);border-radius:16px;padding:30px 28px;box-shadow:var(--shadow)}
+.track .ic{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.track .ic .mi{font-size:27px}
+.t-green .ic{background:#e7f6ec;color:#1aae39}
+.t-violet .ic{background:#f1ecf7;color:var(--navy)}
+.track h3{font-size:22px;font-weight:700;letter-spacing:-.5px}
+.track p{font-size:15.5px;color:var(--gray);margin-top:10px}
+.track .go{display:inline-flex;align-items:center;gap:7px;margin-top:18px;font-size:14.5px;font-weight:600;color:var(--blue);text-decoration:none}
+.track .go:hover{text-decoration:underline}
+.track ul{list-style:none;margin-top:14px}
+.track li{display:flex;gap:10px;align-items:flex-start;padding:7px 0;font-size:15px;color:var(--gray);border-bottom:1px solid var(--border)}
+.track li:last-child{border-bottom:none}
+.track li .mi{font-size:18px;color:var(--blue);flex-shrink:0;margin-top:2px}
+.prodprice{margin-top:16px;padding-top:14px;border-top:1px solid var(--border);font-size:14px;color:var(--gray)}
+.prodprice b{font-size:24px;color:var(--ink);letter-spacing:-.8px;margin-right:6px}
+
+/* Preise als ruhige Zeilen */
+.prices{margin-top:44px;background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.prow{display:grid;grid-template-columns:52px 1.05fr 1.5fr auto;gap:20px;align-items:center;padding:22px 26px;border-bottom:1px solid var(--border)}
+.prow:last-child{border-bottom:none}
+.prow .ic{width:46px;height:46px;border-radius:10px;background:var(--warm);display:flex;align-items:center;justify-content:center;color:var(--gray)}
+.prow .ic .mi{font-size:24px}
+.prow .nm{font-size:17.5px;font-weight:700;letter-spacing:-.3px}
+.prow .nm small{display:block;font-size:13.5px;font-weight:500;color:var(--gray-l);margin-top:2px}
+.prow .inc{font-size:14.8px;color:var(--gray)}
+.prow .pr{text-align:right;white-space:nowrap}
+.prow .amt{font-size:26px;font-weight:700;letter-spacing:-1px;color:var(--ink)}
+.prow .per{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.6px;color:var(--gray-l)}
+.prow.best{background:#f4f9ff;position:relative}
+.prow.best::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--blue)}
+.prow.best .ic{background:var(--blue);color:#fff}
+.prow.best .nm .tag{display:inline-block;background:var(--blue);color:#fff;font-size:11px;font-weight:600;letter-spacing:.4px;text-transform:uppercase;padding:2px 9px;border-radius:9999px;margin-left:8px;vertical-align:middle}
+.fnote{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px}
+.tagpill{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--border);border-radius:9999px;padding:7px 15px;font-size:13.5px;font-weight:600;color:var(--gray)}
+.tagpill .mi{font-size:16px;color:var(--blue)}
+
+/* FAQ */
+.faq{margin-top:36px;background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);padding:6px 28px}
+details{border-bottom:1px solid var(--border)}
+details:last-child{border-bottom:none}
+details summary{list-style:none;cursor:pointer;padding:19px 2px;display:flex;justify-content:space-between;align-items:center;gap:14px;font-size:16.5px;font-weight:600;letter-spacing:-.2px}
+details summary::-webkit-details-marker{display:none}
+details summary .mi{color:var(--gray-l);transition:transform .2s;flex-shrink:0}
+details[open] summary .mi{transform:rotate(180deg);color:var(--blue)}
+details p{padding:0 2px 19px;color:var(--gray);font-size:15.5px;max-width:76ch}
+
+/* Kontakt */
+.kontakt{background:var(--navy);color:#fff}
+.kontakt .wave-top{display:block;width:100%;height:48px}
+.kontakt .wave-top svg{display:block;width:100%;height:48px}
+.kontakt-grid{display:grid;grid-template-columns:1.1fr auto;gap:44px;align-items:center;padding:40px 0 84px}
+.kontakt .eyebrow{color:#9db1ff}
+.kontakt h2{color:#fff}
+.kontakt p{color:#cdd6f5;font-size:17px;margin-top:14px;max-width:48ch}
+.telcard{display:inline-flex;align-items:center;gap:12px;background:#fff;color:var(--navy);border-radius:12px;padding:15px 26px;margin-top:24px;text-decoration:none;box-shadow:var(--shadow-d);transition:transform .12s}
+.telcard:hover{transform:translateY(-2px)}
+.telcard .mi{font-size:28px;color:var(--blue)}
+.telcard .n{font-size:24px;font-weight:700;letter-spacing:-.7px}
+.qrbox{background:#fff;border-radius:16px;padding:16px;box-shadow:var(--shadow-d);text-align:center;justify-self:end}
+.qrbox img{display:block;width:180px;height:180px;border-radius:8px}
+.qrbox .cap{color:var(--gray);font-size:13px;font-weight:500;margin-top:10px;max-width:180px}
+
+/* Rechtliches + Footer */
+.legal{padding:72px 0 8px}
+.legal h2{font-size:26px}
+.legal h3{font-size:18.5px;font-weight:700;letter-spacing:-.4px;margin:26px 0 6px}
+.legal p,.legal li{font-size:15.4px;color:var(--gray)}
+.legal ul{margin:6px 0 6px 20px}
+html[lang="ar"] .legal ul{margin:6px 20px 6px 0}
+footer{border-top:1px solid var(--border);margin-top:40px;padding:26px 0 48px;background:var(--warm)}
+footer .row{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:14.5px;color:var(--gray)}
+footer a{color:var(--gray);text-decoration:none;font-weight:600}
+footer a:hover{color:var(--ink)}
+
+/* ---------- Responsive ---------- */
+@media (max-width:940px){
+  .hero-grid{grid-template-columns:1fr;gap:36px;padding:60px 0 72px}
+  .flow{grid-template-columns:1fr 1fr}
+  .tracks{grid-template-columns:1fr}
+  .kontakt-grid{grid-template-columns:1fr;padding:24px 0 64px}
+  .qrbox{justify-self:start}
+}
+@media (max-width:640px){
+  .flow{grid-template-columns:1fr}
+  .prow{grid-template-columns:46px 1fr;grid-template-areas:"ic nm" "inc inc" "pr go";row-gap:12px;gap:14px}
+  .prow .ic{grid-area:ic}.prow .nm{grid-area:nm}.prow .inc{grid-area:inc}
+  .prow .pr{grid-area:pr;text-align:start}.prow .go{grid-area:go;justify-self:end}
+  .faq{padding:4px 18px}
+  section{padding:56px 0}
+  .nav-right .btn .txt{display:none}
+  .nav-right .btn{padding:10px 12px}
+}
+/* ---------- Motion ---------- */
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes langfade{from{opacity:.25}to{opacity:1}}
+@keyframes wavego{from{transform:translateX(0)}to{transform:translateX(-400px)}}
+body.langfade{animation:langfade .4s ease}
+.hero .badge{animation:rise .5s .05s both}
+.hero h1{animation:rise .6s .16s both}
+.hero .sub{animation:rise .6s .3s both}
+.hero-btns{animation:rise .6s .44s both}
+.hero-trust{animation:rise .6s .58s both}
+.hpanel{animation:rise .7s .34s both}
+/* Reveal: einblenden beim Kommen, ausblenden beim Weiterziehen — reversibel */
+@keyframes rvIn{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+@keyframes rvOut{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(-18px)}}
+.rv-in{animation:rvIn .65s cubic-bezier(.22,.61,.36,1) both}
+.rv-out{opacity:0;animation:rvOut .5s cubic-bezier(.55,0,1,.45) both}
+.flow .step:nth-child(2){animation-delay:.07s}
+.flow .step:nth-child(3){animation-delay:.14s}
+.flow .step:nth-child(4){animation-delay:.21s}
+.tracks .track:nth-child(2){animation-delay:.09s}
+.amt,.cnt{font-variant-numeric:tabular-nums}
+nav{transition:box-shadow .25s ease,border-color .25s ease}
+nav.scrolled{box-shadow:0 1px 10px rgba(0,0,0,.07);border-color:transparent}
+details[open] p{animation:rise .3s .03s both}
+.step,.track,.faq{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.step:hover,.track:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.08);border-color:rgba(0,0,0,.2)}
+.prow{transition:background-color .15s ease}
+.prow:hover{background:#fafaf9}
+.prow.best:hover{background:#f0f6fd}
+details summary{transition:color .15s ease}
+details summary:hover{color:var(--blue)}
+.tagpill:hover{border-color:rgba(0,0,0,.3);color:var(--ink)}
+.btn{transition:background .15s ease,transform .12s ease,box-shadow .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.langtog button{transition:background .2s ease,color .2s ease}
+.w1{animation:wavego 10s linear infinite}
+.w2{animation:wavego 14s linear infinite}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media print{.rv-in,.rv-out{animation:none!important;opacity:1!important;transform:none!important}}
+/* RTL: Richtungspfeile spiegeln */
+html[lang="ar"] .go .mi{transform:scaleX(-1)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="row">
+    <a class="logo" href="#"><span class="mark"><span class="mi">school</span></span>Lern-Abo</a>
+    <div class="nav-right">
+      <div class="langtog" role="group" aria-label="Sprache / اللغة">
+        <button id="langDe" class="on" onclick="setLang('de')" type="button">DE</button>
+        <button id="langAr" onclick="setLang('ar')" type="button">عربي</button>
+      </div>
+      <a class="btn btn-blue" href="https://wa.me/4915256585467?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20das%20Lern-Abo" target="_blank" rel="noopener"><span class="mi">chat</span><span class="txt" data-ar="واتساب">WhatsApp</span></a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="badge"><span class="mi">verified_user</span><span data-ar="معلم معتمد · في كيل وعن بُعد">Qualifizierter Lehrer · Kiel &amp; online</span></span>
+      <h1><span data-ar-html='باقة <span class="hl">التعلّم</span><br>لرياضيات أو الألمانية'>Das <span class="hl">Lern-Abo</span><br>für Mathe oder Deutsch</span></h1>
+      <p class="sub" data-ar-html='كل أسبوع تمارين حول <b>الموضوعات الحالية في المدرسة</b> — <b>لتعميق الفهم</b> و<b>للتطور فوقها</b>. مع التصحيح في اليوم التالي و<b> حصتين مباشرتين في الشهر</b>.'>Jede Woche Aufgaben rund um die <b>aktuellen Themen aus der Schule</b> — <b>zum Vertiefen</b> und um sich <b>darüber hinaus weiterzuentwickeln</b>. Dazu Korrektur am nächsten Tag und <b>2 Live-Stunden pro Monat</b>.</p>
+      <div class="hero-btns">
+        <a class="btn btn-blue btn-lg" href="#preise"><span class="mi">receipt_long</span><span data-ar="اختر باقتك">Abo auswählen</span></a>
+        <a class="btn btn-line btn-lg" href="https://wa.me/4915256585467?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20das%20Lern-Abo" target="_blank" rel="noopener"><span class="mi">chat</span><span data-ar="اسأل عبر واتساب">Per WhatsApp fragen</span></a>
+      </div>
+      <div class="hero-trust">
+        <span><span class="mi">check_circle</span><span data-ar="بدون تكاليف مخفية">Keine versteckten Kosten</span></span>
+        <span><span class="mi">check_circle</span><span data-ar="إلغاء في أي وقت حتى نهاية الشهر">Jederzeit zum Monatsende kündbar</span></span>
+        <span><span class="mi">check_circle</span><span data-ar="البدء عادة خلال أسبوع">Start meist in 1 Woche</span></span>
+        <span><span class="mi">menu_book</span><span data-ar="وفق متطلبات الرياضيات (Fachanforderungen SH)">Nach den Fachanforderungen Mathematik (SH)</span></span>
+      </div>
+    </div>
+
+    <div class="hpanel">
+      <div class="head">
+        <div class="k" data-ar="الباقة القياسية">Das Standard-Abo</div>
+        <div class="v"><span class="cnt" data-count="99">99</span> € <small data-ar="شهريًا">pro Monat</small></div>
+      </div>
+      <ul>
+        <li><span class="mi">description</span><span data-ar="ورقة تمارين واحدة كل أسبوع — من 15 إلى 20 دقيقة">1 Aufgabenblatt pro Woche — 15–20 Minuten</span></li>
+        <li><span class="mi">task_alt</span><span data-ar="تصحيح + ملاحظة في اليوم التالي">Korrektur + Feedback am nächsten Tag</span></li>
+        <li><span class="mi">videocam</span><span data-ar="2 × 45 دقيقة مباشرة — عبر الإنترنت أو في بيت الطالب">2 × 45 Min Live-Stunden — online oder vor Ort</span></li>
+        <li><span class="mi">trending_up</span><span data-ar="ملاحظة شهرية عن التقدم">Monatliche Fortschritts-Rückmeldung</span></li>
+      </ul>
+      <div class="foot"><span class="mi">info</span><span data-ar="لكل مادة (رياضيات أو ألمانية) · يتوفر أيضًا Light (59 €) و Abi (129 €)">Pro Fach (Mathe oder Deutsch) · auch Light (59 €) und Abi (129 €)</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- Wellen-Dekor: eigener Streifen, überlappt nichts -->
+<div class="wavedeco" aria-hidden="true">
+  <svg viewBox="0 0 1440 56" preserveAspectRatio="none">
+    <path class="w1" d="M-400 30 q 100 -24, 200 0 t 200 0 t 200 0 t 200 0 t 200 0 t 200 0 t 200 0 t 200 0 t 200 0 t 200 0 t 200 0 t 200 0" fill="none" stroke="#d7d5d1" stroke-width="1.5"/>
+    <path class="w2" d="M-400 45 q 100 -18, 200 0 t 200 0 t 200 0 t 200 0 t 200 0 t 200 0 t 200 0 t 200 0 t 200 0 t 200 0 t 200 0 t 200 0" fill="none" stroke="#e8e6e3" stroke-width="1.5"/>
+  </svg>
+</div>
+
+<!-- ============ ABLAUF ============ -->
+<section id="ablauf">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-ar="طريقة العمل">Der Ablauf</span>
+      <h2 data-ar="كيف تعمل الباقة">So funktioniert es</h2>
+      <p class="sec-sub" data-ar="أربع خطوات — لا تحتاجون إلى تطبيق، فقط واتساب.">In 4 Schritten — ihr braucht keine App, nur WhatsApp.</p>
+    </div>
+
+    <div class="flow">
+      <div class="step">
+        <div class="circ"><span class="mi">edit_note</span></div>
+        <span class="num" data-ar="الخطوة 1">Schritt 1</span>
+        <h3 data-ar="المواضيع الحالية في المدرسة">Aktuelle Schultthemen</h3>
+        <p data-ar="الموضوعات الحالية في المدرسة — لتعميق الفهم و للتطور فوقها.">Es geht um die aktuellen Themen aus der Schule — zum Vertiefen und um sich darüber hinaus weiterzuentwickeln.</p>
+      </div>
+      <div class="step">
+        <div class="circ"><span class="mi">description</span></div>
+        <span class="num" data-ar="الخطوة 2">Schritt 2</span>
+        <h3 data-ar="استلموا الورقة">Blatt erhalten</h3>
+        <p data-ar="ورقة تمارين واحدة كل أسبوع — من 15 إلى 20 دقيقة فقط.">1 Aufgabenblatt pro Woche — nur 15–20 Minuten.</p>
+      </div>
+      <div class="step">
+        <div class="circ"><span class="mi">photo_camera</span></div>
+        <span class="num" data-ar="الخطوة 3">Schritt 3</span>
+        <h3 data-ar="أعيدوا الحل">Zurückschicken</h3>
+        <p data-ar="صورة الحل ← التصحيح والملاحظة في اليوم التالي.">Lösung per Foto → Korrektur + Feedback am nächsten Tag.</p>
+      </div>
+      <div class="step">
+        <div class="circ"><span class="mi">videocam</span></div>
+        <span class="num" data-ar="الخطوة 4">Schritt 4</span>
+        <h3 data-ar="حصتان مباشرتان">Live lernen</h3>
+        <p data-ar="2 × 45 دقيقة في الشهر — عبر الإنترنت أو في بيتكم.">2 × 45 Min pro Monat — online oder vor Ort bei dir zu Hause.</p>
+      </div>
+    </div>
+    <div class="flowline"></div>
+    <div class="fachnote"><span class="mi">workspace_premium</span><span data-ar="متطلبات الرياضيات (Fachanforderungen) في شليسفيغ-هولشتاين (IQSH 2024): من الصف 1 حتى Abitur — ESA · MSA · AHR.">Die Mathe-Aufgaben orientieren sich an den Fachanforderungen Mathematik für Schleswig-Holstein (IQSH, 2. Auflage 2024) — von Klasse 1 bis Abitur: ESA · MSA · AHR.</span></div>
+  </div>
+</section>
+
+<!-- ============ FÜR WEN ============ -->
+<section class="alt" id="fuerwen">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-ar="لمن هذه الباقة">Zielgruppe</span>
+      <h2 data-ar="لمن هذه الباقة؟">Für wen ist das Abo?</h2>
+      <p class="sec-sub" data-ar="للجميع — بحسب ما يحتاجه طالبكم تمامًا.">Für beide — je nachdem, was euer Kind gerade braucht.</p>
+    </div>
+
+    <div class="tracks">
+      <div class="track t-green">
+        <div class="ic"><span class="mi">trending_up</span></div>
+        <h3 data-ar="سدّ الفجوات">Aufholen</h3>
+        <p data-ar="معالجة الثغرات وتقوية الأساسيات بخطوات بطيئة مناسبة لمستوى الطالب — تعرفون بعد كل أسبوع ما الذي أتقنه فعلًا.">Lücken schließen, Grundlagen festigen, langsam steigern — mit ruhigem, passendem Tempo. Ihr seht nach jeder Woche, was schon sitzt.</p>
+        <a class="go" href="#preise"><span data-ar="الأسعار">Preise ansehen</span> <span class="mi">arrow_forward</span></a>
+      </div>
+      <div class="track t-violet">
+        <div class="ic"><span class="mi">workspace_premium</span></div>
+        <h3 data-ar="البقاء في المقدمة">Vorn bleiben</h3>
+        <p data-ar="تمارين تحدّية، الاستعداد للاختبارات، تدريب على الـ Abitur — للطلاب المتفوقين.">Herausfordernde Aufgaben, Klausurvorbereitung, Abi-Training — für gute Schüler, die es gut halten wollen.</p>
+        <a class="go" href="#preise"><span data-ar="الأسعار">Preise ansehen</span> <span class="mi">arrow_forward</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ZWEI PRODUKTE ============ -->
+<section id="produkte">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-ar="منتجان">Zwei Produkte</span>
+      <h2 data-ar="اختر المادة: رياضيات أو ألمانية">Mathe oder Deutsch — du wählst das Fach</h2>
+      <p class="sec-sub" data-ar="الاشتراك يشمل دائمًا مادة واحدة ويُبنى عليها بالضبط. من يحتاج المادةين يجمع بين اشتراكين.">Ein Abo gilt immer für genau ein Fach und wird darauf zugeschnitten. Wer beides braucht, kombiniert zwei Abos.</p>
+    </div>
+    <div class="tracks" style="margin-top:36px">
+      <div class="track">
+        <div class="ic" style="background:#eaf4fe;color:var(--blue)"><span class="mi">calculate</span></div>
+        <h3 data-ar="اشتراك الرياضيات">Mathe-Abo</h3>
+        <ul>
+          <li><span class="mi">check_circle</span><span data-ar="جميع الصفوف من 1 إلى 13">Alle Klassen von 1 bis 13</span></li>
+          <li><span class="mi">check_circle</span><span data-ar="من الأساسيات حتى Analysis, Geometrie und Stochastik (Abitur)">Von den Grundlagen bis Analysis, Geometrie und Stochastik (Abi)</span></li>
+          <li><span class="mi">check_circle</span><span data-ar="متطلبات الرياضيات (Fachanforderungen SH) — ESA · MSA · AHR">Aufgaben nach den Fachanforderungen Mathematik SH (ESA · MSA · AHR)</span></li>
+        </ul>
+        <div class="prodprice"><b>99 €</b><span data-ar="لكل مادة / شهريًا">pro Fach / Monat</span></div>
+      </div>
+      <div class="track">
+        <div class="ic" style="background:#e7f6ec;color:#1aae39"><span class="mi">spellcheck</span></div>
+        <h3 data-ar="اشتراك الألمانية">Deutsch-Abo</h3>
+        <ul>
+          <li><span class="mi">check_circle</span><span data-ar="حتى الصف 10">Bis Klasse 10</span></li>
+          <li><span class="mi">check_circle</span><span data-ar="الإملاء، قواعد اللغة والنصوص (Inhaltsangabe, Erörterung)">Rechtschreibung, Grammatik und Texte (Inhaltsangabe, Erörterung)</span></li>
+          <li><span class="mi">check_circle</span><span data-ar="فهم المقروء والاستعداد للاختبارات — أيضًا لطلاب DaZ">Leseverstehen und Vorbereitung auf Klassenarbeiten — auch für Schüler mit DaZ</span></li>
+        </ul>
+        <div class="prodprice"><b>99 €</b><span data-ar="لكل مادة / شهريًا">pro Fach / Monat</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PREISE ============ -->
+<section class="alt" id="preise">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-ar="الأسعار">Preise</span>
+      <h2 data-ar="اختر الباقة">Abo wählen</h2>
+      <p class="sec-sub" data-ar="لكل مادة · اشتراك شهري · إلغاء في أي وقت حتى نهاية الشهر · بدون تكاليف مخفية">Pro Fach · monatlich laufend · jederzeit zum Monatsende kündbar · keine versteckten Kosten</p>
+    </div>
+
+    <div class="prices">
+      <div class="prow">
+        <div class="ic"><span class="mi">bolt</span></div>
+        <div class="nm" data-ar="خفيفة (Light)">Light<small data-ar="تمارين وتصحيح فقط">Nur Aufgaben &amp; Korrektur</small></div>
+        <div class="inc" data-ar="ورقة كل أسبوع + تصحيح + ملاحظة في اليوم التالي — بدون حصص مباشرة.">1 Blatt pro Woche + Korrektur + Feedback am nächsten Tag — ohne Live-Stunden.</div>
+        <div class="pr"><div class="amt"><span class="cnt" data-count="59">59</span> €</div><div class="per" data-ar="شهريًا">pro Monat</div></div>
+        <a class="btn btn-ghost" href="https://wa.me/4915256585467?text=Hallo%2C%20ich%20m%C3%B6chte%20das%20Light-Abo%20(59%20%E2%82%AC%2FMonat)%20f%C3%BCr%20mein%20Kind%20abonnieren." target="_blank" rel="noopener" data-ar="اختر">Wählen</a>
+      </div>
+      <div class="prow best">
+        <div class="ic"><span class="mi">star</span></div>
+        <div class="nm"><span data-ar="قياسية (Standard)">Standard</span><span class="tag" data-ar="الأكثر اختيارًا">Beliebt</span><small data-ar="الباقة الكاملة">Das Komplett-Paket</small></div>
+        <div class="inc" data-ar="ورقة كل أسبوع + تصحيح + 2 × 45 دقيقة مباشرة (عبر الإنترنت أو في البيت) + ملاحظة عن التقدم.">1 Blatt pro Woche + Korrektur + <b>2 × 45 Min Live-Stunden (online oder vor Ort)</b> + Fortschritts-Feedback.</div>
+        <div class="pr"><div class="amt"><span class="cnt" data-count="99">99</span> €</div><div class="per" data-ar="شهريًا">pro Monat</div></div>
+        <a class="btn btn-blue" href="https://wa.me/4915256585467?text=Hallo%2C%20ich%20m%C3%B6chte%20das%20Standard-Abo%20(99%20%E2%82%AC%2FMonat)%20f%C3%BCr%20mein%20Kind%20abonnieren." target="_blank" rel="noopener" data-ar="اختر">Wählen</a>
+      </div>
+      <div class="prow">
+        <div class="ic"><span class="mi">school</span></div>
+        <div class="nm" data-ar="المرحلة العليا / Abi">Oberstufe / Abi<small data-ar="لآخر سنوات الدراسة">Für die letzten Jahre</small></div>
+        <div class="inc" data-ar="مثل القياسية — تمارين بمستوى Abi، تدريب على الاختبارات و Abi.">Wie Standard — Aufgaben auf Abi-Niveau, Prüfungs- und Abi-Training.</div>
+        <div class="pr"><div class="amt"><span class="cnt" data-count="129">129</span> €</div><div class="per" data-ar="شهريًا">pro Monat</div></div>
+        <a class="btn btn-ghost" href="https://wa.me/4915256585467?text=Hallo%2C%20ich%20m%C3%B6chte%20das%20Oberstufe-Abi-Abo%20(129%20%E2%82%AC%2FMonat)%20abonnieren." target="_blank" rel="noopener" data-ar="اختر">Wählen</a>
+      </div>
+      <div class="prow">
+        <div class="ic"><span class="mi">groups</span></div>
+        <div class="nm" data-ar="الطالب الثاني">2. Kind<small data-ar="للإخوة">Für Geschwister</small></div>
+        <div class="inc" data-ar="مثل القياسية — إضافة لباقة الأولى، خصم العائلة.">Wie Standard — Ergänzung zum ersten Abo, Familienrabatt.</div>
+        <div class="pr"><div class="amt"><span class="cnt" data-count="79">79</span> €</div><div class="per" data-ar="شهريًا">pro Monat</div></div>
+        <a class="btn btn-ghost" href="https://wa.me/4915256585467?text=Hallo%2C%20ich%20m%C3%B6chte%20ein%20zweites%20Abo%20f%C3%BCr%20das%20zweite%20Kind%20(79%20%E2%82%AC%2FMonat)." target="_blank" rel="noopener" data-ar="اختر">Wählen</a>
+      </div>
+    </div>
+
+    <div class="fnote">
+      <span class="tagpill"><span class="mi">calculate</span><span data-ar="رياضيات: جميع الصفوف">Mathe — alle Klassen</span></span>
+      <span class="tagpill"><span class="mi">menu_book</span><span data-ar="ألمانية: حتى الصف العاشر">Deutsch bis Klasse 10</span></span>
+      <span class="tagpill"><span class="mi">fact_check</span><span data-ar="اختبارات و MSA و Abi">Klausuren, MSA &amp; Abi</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-ar="أسئلة">Fragen</span>
+      <h2 data-ar="أسئلة شائعة">Häufige Fragen</h2>
+    </div>
+
+    <div class="faq">
+      <details>
+        <summary><span data-ar="متى نبدأ؟">Wie schnell starten wir?</span><span class="mi">expand_more</span></summary>
+        <p data-ar="بعد رسالتكم يستلم طالبكم أول ورقة تمارين عادةً خلال أسبوع.">Schreibt ihr mir, bekommt euer Kind meist innerhalb einer Woche das erste Aufgabenblatt.</p>
+      </details>
+      <details>
+        <summary><span data-ar="ماذا يحدث إذا لم نستخدم الحصتين المباشرتين؟">Was passiert mit den 2 Live-Stunden, wenn wir sie nicht nutzen?</span><span class="mi">expand_more</span></summary>
+        <p data-ar="الحصتان (45 دقيقة لكل منهما) لكل شهر ميلادي — غير قابلتان للتحويل أو للتجميع. تحجزون المواعيد معي ببساطة.">Die 2 Live-Stunden (je 45 Min) gelten pro Kalendermonat — sie sind nicht übertragbar und nicht ansparbar. Termine bucht ihr einfach bei mir.</p>
+      </details>
+      <details>
+        <summary><span data-ar="كيف أُلغي الاشتراك؟">Wie kündige ich?</span><span class="mi">expand_more</span></summary>
+        <p data-ar="في أي وقت حتى نهاية الشهر، برسالة واتساب — بدون مبرر وبدون مدة دنيا.">Jederzeit zum Monatsende, formlos per WhatsApp — ohne Begründung, ohne Mindestlaufzeit.</p>
+      </details>
+      <details>
+        <summary><span data-ar="هل تناسب الباقة الطلاب المتفوقين؟">Funktioniert das auch für starke Schüler?</span><span class="mi">expand_more</span></summary>
+        <p data-ar="نعم. كثير من العائلات تستخدم الباقة للحفاظ على الدرجات الجيدة: تمارين أصعب، الاستعداد للاختبارات، تدريب على Abitur.">Ja. Viele Familien nutzen das Abo, um gute Noten zu halten: schwierigere Aufgaben, Klausurvorbereitung, Abi-Training.</p>
+      </details>
+      <details>
+        <summary><span data-ar="أين تُقام الحصص؟">Wo findet der Unterricht statt?</span><span class="mi">expand_more</span></summary>
+        <p data-ar="الحصص المباشرة عبر الإنترنت — أو في بيتكم في كيل والمناطق المحيطة. فقط أخبرونا بما يناسبكم أفضل.">Die Live-Stunden finden online per Video statt — oder vor Ort bei euch zu Hause, in Kiel und Umgebung. Sagt mir einfach, was euch besser passt.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KONTAKT ============ -->
+<section class="kontakt" id="kontakt">
+  <div class="wave-top" aria-hidden="true">
+    <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
+      <path fill="#ffffff" d="M0 0 L1440 0 L1440 12 C 1260 44, 1080 4, 900 24 S 540 44, 360 24 S 0 4, 0 24 Z"/>
+    </svg>
+  </div>
+  <div class="wrap kontakt-grid">
+    <div>
+      <span class="eyebrow" data-ar="تواصل">Kontakt</span>
+      <h2 data-ar="جاهزون؟ راسلوني.">Bereit? Schreibt mir.</h2>
+      <p data-ar="امسحوا رمز QR أو اتصلوا مباشرة — تُفتح الرسالة الجاهزة. سأخبركم بالمواعيد المتاحة.">QR-Code scannen oder einfach anrufen — es öffnet sich schon die richtige Nachricht. Ich nenne euch die freien Plätze.</p>
+      <a class="telcard" href="tel:+4915256585467"><span class="mi">call</span><span class="n">0152 56585467</span></a>
+    </div>
+    <div class="qrbox">
+      <img src="Lern-Abo-QR.png" alt="QR-Code: WhatsApp 0152 56585467">
+      <div class="cap" data-ar="المسح يفتح واتساب برسالة جاهزة">Scannen öffnet WhatsApp mit vorausgefüllter Nachricht</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RECHTLICHES ============ -->
+<div class="legal wrap" id="impressum">
+  <h2 data-ar="إشعار قانوني (Impressum)">Impressum</h2>
+  <p>Tarek Issa · Sören 18 · 24148 Kiel · WhatsApp: 0152 56585467</p>
+
+  <h3 id="datenschutz" data-ar="حماية البيانات (Datenschutz, Kurzfassung)">Datenschutz (Kurzfassung)</h3>
+  <p data-ar="لا يخزّن هذا الموقع أي ملفات تعريف ارتباط ولا يجمع أي بيانات تحليلية. عند التواصل عبر واتساب نعالج بياناتكم فقط لتنفيذ اشتراك الباقة، ولا يتم تزويد أي طرف ثالث بها.">Diese Seite speichert keine Cookies und erhebt keine Analysedaten. Wenn ihr per WhatsApp Kontakt aufnehmt, verarbeiten wir eure Daten nur zur Abwicklung des Abo-Vertrags. Eine Weitergabe an Dritte findet nicht statt.</p>
+
+  <h3 id="bedingungen" data-ar="شروط الاشتراك (Abo-Bedingungen, Kurzfassung)">Abo-Bedingungen (Kurzfassung)</h3>
+  <p data-ar='النسخة الكاملة للطباعة متاحة كملف PDF (<a href="Lern-Abo-Bedingungen.pdf" target="_blank">Lern-Abo-Bedingungen.pdf</a>).'>Vollständige Fassung zum Ausdrucken gibt es als PDF (<a href="Lern-Abo-Bedingungen.pdf" target="_blank">Lern-Abo-Bedingungen.pdf</a>).</p>
+  <ul>
+    <li data-ar="<b>المدة:</b> يمتد شهريًا، إلغاء في أي وقت حتى نهاية الشهر (ببساطة عبر واتساب)."><b>Laufzeit:</b> monatlich laufend, jederzeit zum Monatsende kündbar (formlos per WhatsApp).</li>
+    <li data-ar="<b>الدفع:</b> شهريًا مقدمًا عن طريق تحويل بنكي."><b>Zahlung:</b> monatlich im Voraus, per Überweisung.</li>
+    <li data-ar="<b>الساعات:</b> حصتان مباشرتان (45 دقيقة) كل شهر ميلادي — غير قابلتان للتحويل أو التجميع."><b>Stunden:</b> 2 Live-Stunden (45 Min) je Kalendermonat, nicht übertragbar, nicht ansparbar.</li>
+    <li data-ar="<b>الإلغاء:</b> خلال 14 يومًا للعقود المتعقَّدة عن بُعد (التفاصيل في ملف PDF)."><b>Widerruf:</b> 14 Tage bei Fernabsatz-Verträgen (Details im PDF).</li>
+  </ul>
+</div>
+
+<footer>
+  <div class="wrap row">
+    <div>
+      <a href="#impressum" data-ar="إشعار قانوني">Impressum</a> ·
+      <a href="#datenschutz" data-ar="حماية البيانات">Datenschutz</a> ·
+      <a href="#bedingungen" data-ar="شروط الاشتراك">Abo-Bedingungen</a>
+    </div>
+    <div data-ar="Lern-Abo · رياضيات أو ألمانية · كيل · عن بُعد وفي البيت · WhatsApp 0152 56585467">Lern-Abo · Mathe oder Deutsch · Kiel · online &amp; vor Ort · WhatsApp 0152 56585467</div>
+  </div>
+</footer>
+
+<script>
+var TITLES={de:"Lern-Abo Kiel — Nachhilfe im Abo, Mathe & Deutsch",ar:"Lern-Abo Kiel — Nachhilfe, Mathe & Deutsch (ar)"};
+function setLang(lang){
+  if(lang!=="ar") lang="de";
+  document.documentElement.lang=lang;
+  document.documentElement.dir=(lang==="ar")?"rtl":"ltr";
+  document.title=TITLES[lang];
+  document.querySelectorAll("[data-ar]").forEach(function(el){
+    if(!el.hasAttribute("data-de")) el.setAttribute("data-de",el.innerHTML);
+    el.innerHTML=(lang==="ar")?el.getAttribute("data-ar"):el.getAttribute("data-de");
+  });
+  document.querySelectorAll("[data-ar-html]").forEach(function(el){
+    if(!el.hasAttribute("data-de-html")) el.setAttribute("data-de-html",el.innerHTML);
+    el.innerHTML=(lang==="ar")?el.getAttribute("data-ar-html"):el.getAttribute("data-de-html");
+  });
+  document.getElementById("langDe").classList.toggle("on",lang!=="ar");
+  document.getElementById("langAr").classList.toggle("on",lang==="ar");
+  try{localStorage.setItem("lernaboLang",lang)}catch(e){}
+  try{
+    if(!(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)){
+      document.body.classList.remove("langfade"); void document.body.offsetWidth;
+      document.body.classList.add("langfade");
+      setTimeout(function(){document.body.classList.remove("langfade")},430);
+    }
+  }catch(e){}
+}
+(function(){
+  var q=new URLSearchParams(location.search).get("lang");
+  var saved=null; try{saved=localStorage.getItem("lernaboLang")}catch(e){}
+  if(q==="ar"||saved==="ar") setLang("ar");
+})();
+</script>
+
+<script>
+/* Motion: sanftes Ein-/Ausblenden beim Scrollen + hochzählende Zahlen */
+(function(){
+  var reduced = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var nav = document.querySelector("nav");
+  if(nav){ addEventListener("scroll", function(){ nav.classList.toggle("scrolled", scrollY > 6); }, {passive:true}); }
+  if(reduced || !("IntersectionObserver" in window)) return;
+
+  function countUp(el){
+    var target = parseInt(el.getAttribute("data-count"), 10) || 0, dur = 950, t0 = null;
+    if(el._raf) cancelAnimationFrame(el._raf);
+    el.textContent = "0";
+    function step(ts){
+      if(t0 === null) t0 = ts;
+      var p = Math.min((ts - t0) / dur, 1);
+      el.textContent = String(Math.round(target * (1 - Math.pow(1 - p, 3))));
+      if(p < 1) el._raf = requestAnimationFrame(step);
+    }
+    el._raf = requestAnimationFrame(step);
+  }
+  var counters = document.querySelectorAll(".cnt");
+  if(counters.length){
+    var cio = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        var el = e.target;
+        if(e.isIntersecting){ countUp(el); }
+        else{
+          if(el._raf) cancelAnimationFrame(el._raf);
+          el.textContent = "0";
+        }
+      });
+    }, {threshold:.55});
+    counters.forEach(function(el){ el.textContent = "0"; cio.observe(el); });
+  }
+
+  var targets = document.querySelectorAll(".sec-head, .flow .step, .tracks .track, .prices, .fachnote, .fnote, .faq, .kontakt-grid > div, .legal h2");
+  targets.forEach(function(el){ el.classList.add("rv-out"); });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      var el = e.target;
+      el.classList.remove("rv-in", "rv-out");
+      void el.offsetWidth;
+      el.classList.add(e.isIntersecting ? "rv-in" : "rv-out");
+    });
+  }, {threshold:.12, rootMargin:"0px 0px -6% 0px"});
+  targets.forEach(function(el){ io.observe(el); });
+  document.addEventListener("animationend", function(ev){
+    if(ev.animationName === "rvIn" && ev.target.classList) ev.target.classList.remove("rv-in");
+  }, true);
+})();
+</script>
+
+</body>
+</html>
