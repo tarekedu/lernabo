@@ -34,14 +34,19 @@ a{color:var(--blue)}
 
 /* ---------- Nav ---------- */
 nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-nav .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 24px;max-width:1120px;margin:0 auto}
+nav .row{display:flex;align-items:center;gap:16px;padding:13px 24px;max-width:1120px;margin:0 auto}
 .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;letter-spacing:-.4px;color:var(--ink);text-decoration:none;flex-shrink:0}
 .logo .mark{width:32px;height:32px;border-radius:8px;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center}
 .logo .mark .mi{font-size:19px}
-.nav-right{display:flex;align-items:center;gap:12px}
+.nav-right{display:flex;align-items:center;gap:12px;margin-left:auto}
 .langtog{display:flex;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:#fff}
 .langtog button{border:none;background:transparent;font:inherit;font-weight:600;font-size:13.5px;padding:7px 14px;cursor:pointer;color:var(--gray)}
 .langtog button.on{background:var(--ink);color:#fff}
+.nav-links{display:flex;align-items:center;gap:24px;margin:0 4px 0 26px}
+.nav-links a{color:var(--gray);text-decoration:none;font-size:15px;font-weight:500;padding:6px 2px;letter-spacing:-.1px}
+.nav-links a:hover{color:var(--ink)}
+.burger{display:none;width:40px;height:40px;border:1px solid var(--border);border-radius:9px;background:#fff;color:var(--ink);align-items:center;justify-content:center;cursor:pointer}
+.burger .mi{font-size:22px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:15px;padding:10px 18px;border-radius:4px;text-decoration:none;border:1px solid transparent;cursor:pointer;white-space:nowrap;transition:background .15s,transform .1s}
 .btn:active{transform:scale(.97)}
 .btn .mi{font-size:18px}
@@ -55,7 +60,7 @@ nav .row{display:flex;align-items:center;justify-content:space-between;gap:16px;
 
 /* ---------- Hero ---------- */
 .hero{background:var(--warm);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:48px 0 96px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding-top:48px;padding-bottom:96px}
 .badge{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--border);border-radius:9999px;padding:6px 14px;font-size:13px;font-weight:600;color:var(--gray);box-shadow:var(--shadow)}
 .badge .mi{font-size:16px;color:var(--blue)}
 h1{font-size:clamp(38px,5.2vw,62px);font-weight:700;line-height:1.02;letter-spacing:-2.1px;margin-top:22px;color:var(--ink)}
@@ -155,7 +160,7 @@ details p{padding:0 2px 19px;color:var(--gray);font-size:15.5px;max-width:76ch}
 .kontakt{background:var(--navy);color:#fff}
 .kontakt .wave-top{display:block;width:100%;height:48px}
 .kontakt .wave-top svg{display:block;width:100%;height:48px}
-.kontakt-grid{display:grid;grid-template-columns:1.1fr auto;gap:44px;align-items:center;padding:40px 0 84px}
+.kontakt-grid{display:grid;grid-template-columns:1.1fr auto;gap:44px;align-items:center;padding-top:40px;padding-bottom:84px}
 .kontakt .eyebrow{color:#9db1ff}
 .kontakt h2{color:#fff}
 .kontakt p{color:#cdd6f5;font-size:17px;margin-top:14px;max-width:48ch}
@@ -181,11 +186,16 @@ footer a:hover{color:var(--ink)}
 
 /* ---------- Responsive ---------- */
 @media (max-width:940px){
-  .hero-grid{grid-template-columns:1fr;gap:36px;padding:36px 0 72px}
+  .hero-grid{grid-template-columns:1fr;gap:36px;padding-top:36px;padding-bottom:72px}
   .flow{grid-template-columns:1fr 1fr}
   .tracks{grid-template-columns:1fr}
-  .kontakt-grid{grid-template-columns:1fr;padding:24px 0 64px}
+  .kontakt-grid{grid-template-columns:1fr;padding-top:24px;padding-bottom:64px}
   .qrbox{justify-self:start}
+  .nav-links{position:absolute;left:0;right:0;top:100%;display:block;margin:0;background:#fff;border-bottom:1px solid var(--border);box-shadow:0 16px 30px rgba(0,0,0,.07);padding:8px 24px 12px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .18s ease,transform .18s ease,visibility .18s}
+  nav.open .nav-links{opacity:1;visibility:visible;transform:none}
+  .nav-links a{display:block;padding:13px 0;font-size:16px;border-bottom:1px solid var(--border)}
+  .nav-links a:last-child{border-bottom:none}
+  .burger{display:inline-flex}
 }
 @media (max-width:640px){
   .flow{grid-template-columns:1fr}
@@ -253,15 +263,24 @@ html[lang="ar"] .go .mi{transform:scaleX(-1)}
 </head>
 <body>
 
-<nav>
+<nav id="topnav">
   <div class="row">
     <a class="logo" href="#"><span class="mark"><span class="mi">school</span></span>Lern-Abo</a>
+    <div class="nav-links" id="navlinks">
+      <a href="#ablauf" data-ar="طريقة العمل">Ablauf</a>
+      <a href="#fuerwen" data-ar="لمن هذه الباقة">Für wen</a>
+      <a href="#produkte" data-ar="منتجان">Produkte</a>
+      <a href="#preise" data-ar="الأسعار">Preise</a>
+      <a href="#faq" data-ar="أسئلة">Fragen</a>
+      <a href="#kontakt" data-ar="تواصل">Kontakt</a>
+    </div>
     <div class="nav-right">
       <div class="langtog" role="group" aria-label="Sprache / اللغة">
         <button id="langDe" class="on" onclick="setLang('de')" type="button">DE</button>
         <button id="langAr" onclick="setLang('ar')" type="button">عربي</button>
       </div>
       <a class="btn btn-blue" href="https://wa.me/4915256585467?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Nachhilfe%20%E2%80%94%20Lern-Abo%20oder%20Einzelunterricht." target="_blank" rel="noopener"><span class="mi">chat</span><span class="txt" data-ar="واتساب">WhatsApp</span></a>
+      <button class="burger" id="burger" type="button" aria-label="Menü öffnen" aria-expanded="false" onclick="toggleMenu()"><span class="mi">menu</span></button>
     </div>
   </div>
 </nav>
@@ -590,25 +609,24 @@ function setLang(lang){
   if(counters.length){
     var cio = new IntersectionObserver(function(entries){
       entries.forEach(function(e){
-        var el = e.target;
-        if(e.isIntersecting){ countDown(el); }
-        else{
-          if(el._raf) cancelAnimationFrame(el._raf);
-          el.textContent = String(el.getAttribute("data-from") || el.getAttribute("data-count"));
-        }
+        if(!e.isIntersecting) return;
+        countDown(e.target);
+        cio.unobserve(e.target);
       });
-    }, {threshold:.55});
+    }, {threshold:0});
     counters.forEach(function(el){ el.textContent = String(el.getAttribute("data-from") || el.textContent); cio.observe(el); });
   }
 
-  var targets = document.querySelectorAll(".sec-head, .flow .step, .tracks .track, .prices, .fachnote, .fnote, .faq, .kontakt-grid > div, .legal h2");
+  var targets = document.querySelectorAll(".sec-head, .flow .step, .tracks .track, .prices, .fachnote, .fnote, .faq, .kontakt-grid > div");
   targets.forEach(function(el){ el.classList.add("rv-out"); });
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
+      if(!e.isIntersecting) return;
       var el = e.target;
-      el.classList.remove("rv-in", "rv-out");
+      el.classList.remove("rv-out");
       void el.offsetWidth;
-      el.classList.add(e.isIntersecting ? "rv-in" : "rv-out");
+      el.classList.add("rv-in");
+      io.unobserve(el);
     });
   }, {threshold:.12, rootMargin:"0px 0px -10% 0px"});
   targets.forEach(function(el){ io.observe(el); });
@@ -616,6 +634,27 @@ function setLang(lang){
     if(ev.animationName === "rvIn" && ev.target.classList) ev.target.classList.remove("rv-in");
   }, true);
 })();
+</script>
+
+<script>
+/* Mobile-Menü (Burger-Button) */
+function toggleMenu(){
+  var n=document.getElementById("topnav"), b=document.getElementById("burger");
+  var open=n.classList.toggle("open");
+  b.setAttribute("aria-expanded", open?"true":"false");
+  b.setAttribute("aria-label", open?"Menü schließen":"Menü öffnen");
+  b.querySelector(".mi").textContent = open?"close":"menu";
+}
+document.querySelectorAll("#navlinks a").forEach(function(a){
+  a.addEventListener("click", function(){
+    var n=document.getElementById("topnav");
+    if(n.classList.contains("open")) toggleMenu();
+  });
+});
+addEventListener("resize", function(){
+  var n=document.getElementById("topnav");
+  if(innerWidth>940 && n.classList.contains("open")) toggleMenu();
+});
 </script>
 
 </body>
