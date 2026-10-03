@@ -136,6 +136,8 @@ h2{font-size:clamp(28px,3.6vw,44px);font-weight:700;letter-spacing:-1.5px;line-h
 .prow.best .ic{background:var(--blue);color:#fff}
 .prow.best .nm .tag{display:inline-block;background:var(--blue);color:#fff;font-size:11px;font-weight:600;letter-spacing:.4px;text-transform:uppercase;padding:2px 9px;border-radius:9999px;margin-left:8px;vertical-align:middle}
 .fnote{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px}
+.bnote{margin-top:18px;display:flex;gap:9px;align-items:flex-start;font-size:13.5px;color:var(--gray);line-height:1.45}
+.bnote .mi{font-size:17px;color:var(--gray-l);flex-shrink:0;margin-top:1px}
 .tagpill{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--border);border-radius:9999px;padding:7px 15px;font-size:13.5px;font-weight:600;color:var(--gray)}
 .tagpill .mi{font-size:16px;color:var(--blue)}
 
@@ -288,7 +290,7 @@ html[lang="ar"] .go .mi{transform:scaleX(-1)}
     <div class="hpanel">
       <div class="head">
         <div class="k" data-ar="الباقة القياسية">Das Standard-Abo</div>
-        <div class="v"><span class="cnt" data-count="99">99</span> € <small data-ar="شهريًا">pro Monat</small></div>
+        <div class="v"><span class="cnt" data-count="99" data-from="139">99</span> € <small data-ar="شهريًا">pro Monat</small></div>
       </div>
       <ul>
         <li><span class="mi">description</span><span data-ar="ورقة تمارين واحدة كل أسبوع — من 15 إلى 20 دقيقة">1 Aufgabenblatt pro Woche — 15–20 Minuten</span></li>
@@ -422,31 +424,33 @@ html[lang="ar"] .go .mi{transform:scaleX(-1)}
         <div class="ic"><span class="mi">bolt</span></div>
         <div class="nm" data-ar="خفيفة (Light)">Light<small data-ar="تمارين وتصحيح فقط">Nur Aufgaben &amp; Korrektur</small></div>
         <div class="inc" data-ar="ورقة كل أسبوع + تصحيح + ملاحظة في اليوم التالي — بدون حصص مباشرة.">1 Blatt pro Woche + Korrektur + Feedback am nächsten Tag — ohne Live-Stunden.</div>
-        <div class="pr"><div class="amt"><span class="cnt" data-count="59">59</span> €</div><div class="per" data-ar="شهريًا">pro Monat</div></div>
+        <div class="pr"><div class="amt"><span class="cnt" data-count="59" data-from="89">59</span> €</div><div class="per" data-ar="شهريًا">pro Monat</div></div>
         <a class="btn btn-ghost go" href="https://wa.me/4915256585467?text=Hallo%2C%20ich%20m%C3%B6chte%20das%20Light-Abo%20(59%20%E2%82%AC%2FMonat)%20f%C3%BCr%20mein%20Kind%20abonnieren." target="_blank" rel="noopener" data-ar="اختر">Wählen</a>
       </div>
       <div class="prow best">
         <div class="ic"><span class="mi">star</span></div>
         <div class="nm"><span data-ar="قياسية (Standard)">Standard</span><span class="tag" data-ar="الأكثر اختيارًا">Beliebt</span><small data-ar="الباقة الكاملة">Das Komplett-Paket</small></div>
         <div class="inc" data-ar="ورقة كل أسبوع + تصحيح + 2 × 45 دقيقة مباشرة (عبر الإنترنت أو في البيت) + ملاحظة عن التقدم.">1 Blatt pro Woche + Korrektur + <b>2 × 45 Min Live-Stunden (online oder vor Ort)</b> + Fortschritts-Feedback.</div>
-        <div class="pr"><div class="amt"><span class="cnt" data-count="99">99</span> €</div><div class="per" data-ar="شهريًا">pro Monat</div></div>
+        <div class="pr"><div class="amt"><span class="cnt" data-count="99" data-from="139">99</span> €</div><div class="per" data-ar="شهريًا">pro Monat</div></div>
         <a class="btn btn-blue go" href="https://wa.me/4915256585467?text=Hallo%2C%20ich%20m%C3%B6chte%20das%20Standard-Abo%20(99%20%E2%82%AC%2FMonat)%20f%C3%BCr%20mein%20Kind%20abonnieren." target="_blank" rel="noopener" data-ar="اختر">Wählen</a>
       </div>
       <div class="prow">
         <div class="ic"><span class="mi">school</span></div>
         <div class="nm" data-ar="المرحلة العليا / Abi">Oberstufe / Abi<small data-ar="لآخر سنوات الدراسة">Für die letzten Jahre</small></div>
         <div class="inc" data-ar="مثل القياسية — تمارين بمستوى Abi، تدريب على الاختبارات و Abi.">Wie Standard — Aufgaben auf Abi-Niveau, Prüfungs- und Abi-Training.</div>
-        <div class="pr"><div class="amt"><span class="cnt" data-count="129">129</span> €</div><div class="per" data-ar="شهريًا">pro Monat</div></div>
+        <div class="pr"><div class="amt"><span class="cnt" data-count="129" data-from="179">129</span> €</div><div class="per" data-ar="شهريًا">pro Monat</div></div>
         <a class="btn btn-ghost go" href="https://wa.me/4915256585467?text=Hallo%2C%20ich%20m%C3%B6chte%20das%20Oberstufe-Abi-Abo%20(129%20%E2%82%AC%2FMonat)%20abonnieren." target="_blank" rel="noopener" data-ar="اختر">Wählen</a>
       </div>
       <div class="prow">
         <div class="ic"><span class="mi">groups</span></div>
         <div class="nm" data-ar="الطالب الثاني">2. Kind<small data-ar="للإخوة">Für Geschwister</small></div>
         <div class="inc" data-ar="مثل القياسية — إضافة لباقة الأولى، خصم العائلة.">Wie Standard — Ergänzung zum ersten Abo, Familienrabatt.</div>
-        <div class="pr"><div class="amt"><span class="cnt" data-count="79">79</span> €</div><div class="per" data-ar="شهريًا">pro Monat</div></div>
+        <div class="pr"><div class="amt"><span class="cnt" data-count="79" data-from="99">79</span> €</div><div class="per" data-ar="شهريًا">pro Monat</div></div>
         <a class="btn btn-ghost go" href="https://wa.me/4915256585467?text=Hallo%2C%20ich%20m%C3%B6chte%20ein%20zweites%20Abo%20f%C3%BCr%20das%20zweite%20Kind%20(79%20%E2%82%AC%2FMonat)." target="_blank" rel="noopener" data-ar="اختر">Wählen</a>
       </div>
     </div>
+
+    <div class="bnote"><span class="mi">fact_check</span><span data-ar='عند الطلب عبر واتساب، تُقرّون بأنكم قرأتم <a href="Lern-Abo-Bedingungen.pdf" target="_blank">شروط الاشتراك (Abo-Bedingungen)</a> ووافقتم عليها.'>Mit der Bestellung über WhatsApp bestätigt ihr, die <a href="Lern-Abo-Bedingungen.pdf" target="_blank">Abo-Bedingungen</a> gelesen zu haben und zu akzeptieren.</span></div>
 
     <div class="fnote">
       <span class="tagpill"><span class="mi">calculate</span><span data-ar="رياضيات: جميع الصفوف">Mathe — alle Klassen</span></span>
@@ -579,14 +583,18 @@ function setLang(lang){
   if(nav){ addEventListener("scroll", function(){ nav.classList.toggle("scrolled", scrollY > 6); }, {passive:true}); }
   if(!("IntersectionObserver" in window)) return;
 
-  function countUp(el){
-    var target = parseInt(el.getAttribute("data-count"), 10) || 0, dur = 1150, t0 = null;
+  function countDown(el){
+    var target = parseInt(el.getAttribute("data-count"), 10) || 0,
+        from = parseInt(el.getAttribute("data-from"), 10) || target,
+        dur = 1150, t0 = null;
     if(el._raf) cancelAnimationFrame(el._raf);
-    el.textContent = "0";
+    el.textContent = String(from);
+    if(from === target) return;
     function step(ts){
       if(t0 === null) t0 = ts;
       var p = Math.min((ts - t0) / dur, 1);
-      el.textContent = String(Math.round(target * (1 - Math.pow(1 - p, 3))));
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = String(Math.round(from - (from - target) * eased));
       if(p < 1) el._raf = requestAnimationFrame(step);
     }
     el._raf = requestAnimationFrame(step);
@@ -596,14 +604,14 @@ function setLang(lang){
     var cio = new IntersectionObserver(function(entries){
       entries.forEach(function(e){
         var el = e.target;
-        if(e.isIntersecting){ countUp(el); }
+        if(e.isIntersecting){ countDown(el); }
         else{
           if(el._raf) cancelAnimationFrame(el._raf);
-          el.textContent = "0";
+          el.textContent = String(el.getAttribute("data-from") || el.getAttribute("data-count"));
         }
       });
     }, {threshold:.55});
-    counters.forEach(function(el){ el.textContent = "0"; cio.observe(el); });
+    counters.forEach(function(el){ el.textContent = String(el.getAttribute("data-from") || el.textContent); cio.observe(el); });
   }
 
   var targets = document.querySelectorAll(".sec-head, .flow .step, .tracks .track, .prices, .fachnote, .fnote, .faq, .kontakt-grid > div, .legal h2");
