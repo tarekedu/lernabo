@@ -189,6 +189,8 @@ details p{padding:0 2px 19px;color:var(--gray);font-size:15.5px;max-width:76ch}
 html[lang="ar"] .legal ul{margin:6px 20px 6px 0}
 footer{border-top:1px solid var(--border);margin-top:40px;padding:26px 0 48px;background:var(--warm)}
 footer .row{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:14.5px;color:var(--gray)}
+.ltrnum{unicode-bidi:isolate;direction:ltr;display:inline-block}
+.qrbtn{width:100%;margin-top:12px;font-size:14.5px;padding:10px 8px}
 footer a{color:var(--gray);text-decoration:none;font-weight:600}
 footer a:hover{color:var(--ink)}
 
@@ -549,11 +551,12 @@ html[lang="ar"] .go .mi{transform:scaleX(-1)}
       <span class="eyebrow" data-ar="تواصل">Kontakt</span>
       <h2 data-ar="جاهزون؟ راسلوني.">Bereit? Schreibt mir.</h2>
       <p data-ar="امسحوا رمز QR أو اتصلوا مباشرة — تُفتح الرسالة الجاهزة. سأخبركم بالمواعيد المتاحة.">QR-Code scannen oder einfach anrufen — es öffnet sich schon die richtige Nachricht. Ich nenne euch die freien Plätze.</p>
-      <a class="telcard" href="tel:+4915256585467"><span class="mi">call</span><span class="n">0152 56585467</span></a>
+      <a class="telcard" href="tel:+4915256585467"><span class="mi">call</span><span class="n"><span class="ltrnum">0152 56585467</span></span></a>
     </div>
     <div class="qrbox">
       <img src="Lern-Abo-QR.png" alt="QR-Code: WhatsApp 0152 56585467">
       <div class="cap" data-ar="المسح يفتح واتساب برسالة جاهزة">Scannen öffnet WhatsApp mit vorausgefüllter Nachricht</div>
+      <a class="btn btn-blue qrbtn" href="https://wa.me/4915256585467?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Nachhilfe%20%E2%80%94%20Lern-Abo%20oder%20Einzelunterricht." target="_blank" rel="noopener"><span class="mi">chat</span><span data-ar="راسلوني عبر واتساب">WhatsApp schreiben</span></a>
     </div>
   </div>
 </section>
@@ -565,7 +568,7 @@ html[lang="ar"] .go .mi{transform:scaleX(-1)}
       <a href="Impressum.html#datenschutz" data-ar="حماية البيانات (Datenschutz)">Datenschutz</a> ·
       <a href="Impressum.html#bedingungen" data-ar="شروط الاشتراك (Abo-Bedingungen)">Abo-Bedingungen</a>
     </div>
-    <div data-ar="Lern-Abo · رياضيات أو ألمانية · كيل · عن بُعد وفي البيت · WhatsApp 0152 56585467">Lern-Abo · Mathe oder Deutsch · Kiel · online &amp; vor Ort · WhatsApp 0152 56585467</div>
+    <div data-ar="Lern-Abo · رياضيات أو ألمانية · كيل · عن بُعد وفي البيت · WhatsApp <span class='ltrnum'>0152 56585467</span>">Lern-Abo · Mathe oder Deutsch · Kiel · online &amp; vor Ort · WhatsApp <span class="ltrnum">0152 56585467</span></div>
   </div>
 </footer>
 
