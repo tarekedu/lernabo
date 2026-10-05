@@ -267,6 +267,13 @@ details summary:hover{color:var(--blue)}
 @media print{.rv-in,.rv-out{animation:none!important;opacity:1!important;transform:none!important}}
 /* RTL: Richtungspfeile spiegeln */
 html[lang="ar"] .go .mi{transform:scaleX(-1)}
+
+/* Intensiv-Sektion: Labels + 3 Spalten */
+#intensiv .track{position:relative}
+#intensiv .tracks{grid-template-columns:repeat(3,1fr)}
+.plabel{position:absolute;top:14px;inset-inline-end:14px;background:var(--blue);color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:9999px;letter-spacing:.3px;box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.plabel-sm{font-size:10px;font-weight:600;padding:4px 10px;border-radius:10px;max-width:64%;line-height:1.25;text-align:center}
+@media (max-width:940px){#intensiv .tracks{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -512,16 +519,23 @@ html[lang="ar"] .go .mi{transform:scaleX(-1)}
     </div>
     <div class="tracks">
       <div class="track t-green">
+        <span class="plabel">176 €</span>
         <div class="ic"><span class="mi">event_repeat</span></div>
         <h3 data-ar="الدروس المكثّفة">Intensiv-Paket</h3>
-        <p data-ar="<b>4 مواعيد في الشهر، مدة كل موعد 90 دقيقة، مقابل 176 €.</b> دروس فردية، عبر الإنترنت أو في بيتكم. في الأسابيع التي تهمّ حقًا: الاستعداد للامتحانات، الفروض المدرسية أو التعويض، قبل فوات الأوان."><b>4 Termine im Monat, je 90 Minuten, für 176 €.</b> Einzelunterricht, online oder bei euch vor Ort. In den Wochen, die wirklich zählen: Prüfungsvorbereitung, Klassenarbeiten oder Aufholen, bevor es zu spät ist.</p>
+        <p data-ar="<b>4 مواعيد في الشهر، مدة كل موعد 90 دقيقة.</b> دروس فردية، عبر الإنترنت أو في بيتكم. في الأسابيع التي تهمّ حقًا: الاستعداد للامتحانات، أو التعويض، أو ببساطة دروس مكثّفة، قبل فوات الأوان."><b>4 Termine im Monat, je 90 Minuten.</b> Einzelunterricht, online oder bei euch vor Ort. In den Wochen, die wirklich zählen: Prüfungsvorbereitung, Aufholen oder einfach intensive Begleitung, bevor es zu spät ist.</p>
         <a class="go" href="https://wa.me/4915256585467?text=Hallo!%20Ich%20interessiere%20mich%20f%C3%BCr%20die%20intensive%20Nachhilfe%20(4x90%20Min%2C%20176%20%E2%82%AC%2FMonat)." target="_blank" rel="noopener"><span data-ar="استفسار عبر واتساب">Per WhatsApp anfragen</span> <span class="mi">arrow_forward</span></a>
       </div>
       <div class="track t-violet">
+        <span class="plabel plabel-sm" data-ar="كيل · بلون · رندسبورغ-إكرنفورده">Kiel · Plön · Rendsburg-Eckernförde</span>
         <div class="ic"><span class="mi">confirmation_number</span></div>
         <h3 data-ar="بطاقة التعليم أو مواعيد مفردة">Bildungskarte oder Einzeltermine</h3>
         <p data-ar="ممكنة أيضًا عبر بطاقة التعليم (Bildungskarte) أو بطاقة كيل (Kiel-Karte) بعد الموافقة. أو تحتاجون موعدًا واحدًا فقط؟ تواصلوا معي وسنرتّب الأمر بشكل فردي.">Auch über die Bildungskarte bzw. Kiel-Karte möglich, nach Bewilligung können die Kosten übernommen werden. Oder ihr braucht nur einzelne Termine? Setzt euch mit mir in Kontakt, ich stimme es individuell ab.</p>
-        <a class="go" href="#kontakt"><span data-ar="تواصلوا معي">Kontakt aufnehmen</span> <span class="mi">arrow_forward</span></a>
+      </div>
+      <div class="track t-violet">
+        <div class="ic"><span class="mi">tune</span></div>
+        <h3 data-ar="بشكل فردي">Individuell</h3>
+        <p data-ar="حسب الحاجة: مثلًا تحضير مكثّف لفحص أو امتحان، أو موضوع معيّن، أو أي شيء آخر. أخبروني بما تحتاجون وأنا أرتّب الأمر معكم.">Kommt ganz auf euren Bedarf an: zum Beispiel eine gezielte Klassenarbeits- oder Klausurvorbereitung, ein einzelnes Thema oder etwas ganz anderes. Erzählt mir kurz, was ihr braucht, und ich stimme es mit euch ab.</p>
+        <a class="go" href="https://wa.me/4915256585467?text=Hallo!%20Ich%20habe%20eine%20individuelle%20Anfrage%20zur%20Nachhilfe." target="_blank" rel="noopener"><span data-ar="راسلوني عبر واتساب">Per WhatsApp schreiben</span> <span class="mi">arrow_forward</span></a>
       </div>
     </div>
   </div>
